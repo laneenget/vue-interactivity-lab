@@ -102,6 +102,7 @@
                         <tr v-for="record in activityRecords">
                             <td>{{ record.when | shortDateFormat}}</td>
                             <td>{{ record.howLong | hoursLimit }}</td>
+
                             <td>{{ record.type }}</td>
                             <td>{{ record.digitalTraditional }}</td>
                             <td>{{ record.completedBool }}</td>
@@ -122,6 +123,7 @@
                 <p>You have practiced a total of {{ totalHours }} hours, broken down as follows:</p>
                 
                 <!-- TODO computed property to display total for each type  -->
+
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" v-for="hours, type in totalHoursByType">{{ type }}: {{ hours }}</li>
                 </ul>
@@ -132,7 +134,6 @@
     </div>
 
     <script>
-
       // TODO create vue app here 
       let app = new Vue({
           el: "#app",

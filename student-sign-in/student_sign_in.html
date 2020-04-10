@@ -11,7 +11,6 @@
 
 <body>
     <div id="app">
-
         <!-- TODO show error alert -->
         <div class="alert alert-danger" v-show="errors.length > 0">
             <li v-for="error in errors">{{error}}</li>
@@ -33,6 +32,7 @@
 
             <!-- TODO v-on:click event handler -->
             <button class="btn btn-primary" v-on:click.prevent="addStudent">Add</button>
+
         </div>
 
         <div class="card student-list m-2 p-2">
@@ -44,6 +44,7 @@
                         <th>StarID</th>
                         <th>Present?</th>
                     </tr>
+
                     <!-- TODO create table rows
                     Each row will have a checkbox, bound to the app data
                     When the checkbox is checked/unchecked, the student will be signed in/out 
@@ -51,6 +52,7 @@
                      -->
                     <tr v-for="student in students" v-bind:class="'present-'+student.present">
                         <td>{{ student.name | uppercase }}</td>
+
                         <td>{{ student.starID }}</td>
                         <td> <input type="checkbox" v-model="student.present" v-on:change="checked(student)"></td>
                     </tr>
