@@ -1,5 +1,3 @@
-
-
 /* https://vuejs.org/v2/guide/transitions.html */
 
 .fade-enter-active, .fade-leave-active {
@@ -15,11 +13,12 @@
     overflow: scroll;
 }
 
-.present {
+.present-true {
     color: gray;
     font-style: italic;
 }
 
-.absent {
+.present-false {
     font-weight: bold;
 }
+
